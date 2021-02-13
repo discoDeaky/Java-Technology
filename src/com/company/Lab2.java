@@ -57,20 +57,31 @@ public class Lab2 {
         }
         System.out.println();
 
-        // changing the column and row at the intersection of the maximum element to zero
-        for (int i = 0; i < arr.length; i++){
-            for (int j = 0; j < arr[i].length; j++){
-                if (i == position[0] || j == position[1]){
-                    arr[i][j] = 0;
+        // deleting the column and the row at the intersection of the maximum element
+        int[][] newArr = new int[n-1][m-1];
+        for (int i = 0; i < newArr.length; i++) {
+            for (int j = 0; j < newArr[i].length; j++) {
+                if (i < position[0] & j < position[1]) {
+                    newArr[i][j] = arr[i][j];
+                }
+                else if (i < position[0] & j >= position[1]){
+                    newArr[i][j] = arr[i][j+1];
+                }
+                else if (i >= position[0] & j >= position[1]){
+                    newArr[i][j] = arr[i+1][j+1];
+                }
+                else if (i >= position[0] & j < position[1]){
+                    newArr[i][j] = arr[i+1][j];
                 }
             }
         }
 
+
         // output of a new matrix
         System.out.println("\nNew matrix: ");
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.printf("%d ", arr[i][j]);
+        for (int i = 0; i < newArr.length; i++) {
+            for (int j = 0; j < newArr[i].length; j++) {
+                System.out.printf("%d ", newArr[i][j]);
             }
             System.out.println();
         }
