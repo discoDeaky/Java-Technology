@@ -8,57 +8,57 @@ package com.company;
 class Employee{
     double days, rate;
 
-    public Employee(double days, double rate){
+    Employee(double days, double rate){
         this.days = days;
         this.rate = rate;
     }
 
-    public double Salary (){
+    double Salary (){
         return days * rate;
     }
 }
 
 class Manager extends Employee{
-    public Manager(double days, double rate) {
+    Manager(double days, double rate) {
         super(days, rate);
     }
-    public void display (){
+    void display (){
         System.out.printf("Manager`s salary is %s$\n", super.Salary());
     }
 }
 
 class Analyst extends Employee{
-    public Analyst(double days, double rate) {
+    Analyst(double days, double rate) {
         super(days, rate);
     }
-    public void display (){
+    void display (){
         System.out.printf("Analyst`s salary is %s$\n", super.Salary());
     }
 }
 
 class Programmer extends Employee{
-    public Programmer(double days, double rate) {
+    Programmer(double days, double rate) {
         super(days, rate);
     }
-    public void display (){
+    void display (){
         System.out.printf("Programmer`s salary is %s$\n", super.Salary());
     }
 }
 
 class Tester extends Employee{
-    public Tester(double days, double rate) {
+    Tester(double days, double rate) {
         super(days, rate);
     }
-    public void display (){
+    void display (){
         System.out.printf("Tester`s salary is %s$\n", super.Salary());
     }
 }
 
 class Designer extends Employee{
-    public Designer(double days, double rate) {
+    Designer(double days, double rate) {
         super(days, rate);
     }
-    public void display (){
+    void display (){
         System.out.printf("Designer`s salary is %s$\n", super.Salary());
     }
 }

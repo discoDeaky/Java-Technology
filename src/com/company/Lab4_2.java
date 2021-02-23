@@ -8,59 +8,59 @@ package com.company;
 abstract class Employee1{
     double days, rate;
 
-    public Employee1(double days, double rate){
+    Employee1(double days, double rate){
         this.days = days;
         this.rate = rate;
     }
 
-    public double Salary (){
+    double Salary (){
         return days * rate;
     }
 
-    public abstract void display();
+    abstract void display();
 }
 
 class Manager1 extends Employee1{
-    public Manager1(double days, double rate) {
+    Manager1(double days, double rate) {
         super(days, rate);
     }
-    public void display (){
+    void display (){
         System.out.printf("Manager`s salary is %s$\n", super.Salary());
     }
 }
 
 class Analyst1 extends Employee1{
-    public Analyst1(double days, double rate) {
+    Analyst1(double days, double rate) {
         super(days, rate);
     }
-    public void display (){
+    void display (){
         System.out.printf("Analyst`s salary is %s$\n", super.Salary());
     }
 }
 
 class Programmer1 extends Employee1{
-    public Programmer1(double days, double rate) {
+    Programmer1(double days, double rate) {
         super(days, rate);
     }
-    public void display (){
+    void display (){
         System.out.printf("Programmer`s salary is %s$\n", super.Salary());
     }
 }
 
 class Tester1 extends Employee1{
-    public Tester1(double days, double rate) {
+    Tester1(double days, double rate) {
         super(days, rate);
     }
-    public void display (){
+    void display (){
         System.out.printf("Tester`s salary is %s$\n", super.Salary());
     }
 }
 
 class Designer1 extends Employee1{
-    public Designer1(double days, double rate) {
+    Designer1(double days, double rate) {
         super(days, rate);
     }
-    public void display (){
+    void display (){
         System.out.printf("Designer`s salary is %s$\n", super.Salary());
     }
 }
